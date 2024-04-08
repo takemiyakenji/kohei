@@ -1,0 +1,101 @@
+.modern-top_image{
+  margin-left: 430px;
+  margin-top: 70px;
+  width: 700px;
+
+}
+
+.modern-toptext{
+  font-size: 70px;
+  font-family: serif;
+  position: absolute;
+  z-index: 1;
+  top: 28%;
+  left: 9%;
+  border: solid rgb(222, 172, 237) 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.modern-second_block {
+  background-color: #f0f0f0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.modern-setumei{
+  font-size: 30px;
+  font-family: serif;
+  margin-left:50px
+}
+
+
+.modern-sikisai{
+  font-size: 20px;
+  font-family: serif;
+  margin-right:50px;
+  border: solid black 1px;
+  padding: 20px;
+}
+
+.modern-color-block1{
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  margin-left:  100px;
+}
+
+.modern-color-block2{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin-left:  30px;
+}
+
+.modern-block{
+  display: flex;
+}
+
+.modern-third-block{
+  height: 200px;
+  background-color: #f7f2f7;
+}
+.posts-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 35px;
+}
+
+.post{
+  width: 250px;
+  border: solid black 2px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.itiran-photo{
+  display: flex;
+  justify-content: center;
+}
+
+.modern-kensaku{
+  display:flex;
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 40px
+}
+
+

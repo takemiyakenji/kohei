@@ -1,0 +1,47 @@
+<h1>interior design</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @post do |f| %>
+
+
+  <div class="field">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["カジュアル", "カジュアル"], 
+    ["ナチュラル", "ナチュラル"], 
+    ["モダン", "モダン"],
+    ["クラシック", "クラシック"],
+    ["オーソドックス", "オーソドックス"], 
+    ["エレガント", "エレガント"],
+    ["シック", "シック"],
+    ["アーバン", "アーバン"], 
+    ["マニッシュ", "マニッシュ"],
+    ["エスニック", "エスニック"]], include_blank: "選択して下さい" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :総額  %>
+   <%= f.number_field :price, :size => 10 %>
+  </div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image, :size => 10 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :内容  %>
+    <%= f.text_field :about, :size => 30 , class: "naiyou"%>
+  </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :ハッシュタグ  %>
+    <%= f.text_field :tagu, :size => 30 , class: "haxtusyutagu"%>
+    </div>
+  </div>
+
+  
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", posts_path %>

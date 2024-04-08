@@ -1,0 +1,77 @@
+<body>
+
+<div class="casual-top">
+  <div class="casual-toptext">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    CASUAL</br>
+     (カジュアル)
+  </div>
+ <%= image_tag("casual1.jpg",class: "casual-top_image") %>
+</div>
+
+<div class="casual-second_block">
+  <div class="casual-setumei">
+  全体の色調は、中～高明度、低～中彩度のベージュ<br>
+  ・ブラウン系でまとめ、アクセントカラーを配置し<br>
+  て対比させ、快活で動きのある空間を演出します。<br>
+  小物は高彩度のオレンジやグリーン系をアクセント<br>
+  カラーとして用いると効果的です。
+  </div>
+  <div class="casual-sikisai">
+  素材・・・木、プラスチック、木綿<br>
+  色彩・・・ベージュ・ブラウン系<br>
+    <div class="casual-block1">
+      <div class="casual-color-block1">
+      </div>
+
+      <div class="casual-color-block2">
+      </div>
+    </div>
+  　　・・・高彩度のアクセントカラー
+    <div class="casual-block2">
+      <div class="casual-color-block3">
+      </div>
+
+      <div class="casual-color-block4">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="casual-third-block">
+</div>
+<div class="posts-container">
+  <% @posts.each do |t| %>
+  <div class="post">
+     <div class="itiran-photo">
+      <%= image_tag t.image_url, size: "300x240" if t.image? %><br>
+     </div>
+      <%= t.genre %><br>
+      <%= t.about %><br>
+      <%= t.tagu %><br>
+      <% if user_signed_in? %>
+      <%= link_to t.user.name, user_path(t.user.id) %><br>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>
+            <i class="fas fa-heart fa-bounce animated-hover"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to post_likes_path(id: t.id, post_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+    <% else %>
+    <i class="far fa-heart"></i><%= t.likes.count %>
+   <% end %>
+  <% if user_signed_in? && current_user.id == t.user_id %>
+  <%= link_to "詳細へ", post_path(t.id) %>
+  <%= link_to "編集する", edit_post_path(t.id) %>
+  <%= link_to "削除する", post_path(t.id), method: :delete %>
+  <% end %> 
+
+  </div>
+  <% end %>
+ 
+</div>
+</body>

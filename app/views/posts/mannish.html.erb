@@ -1,0 +1,69 @@
+<body>
+
+<div class="mannish-top">
+  <div class="mannish-toptext">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    MANNISH</br>
+     (マニッシュ)
+  </div>
+ <%= image_tag("modern1.jpg",class: "mannish-top_image") %>
+</div>
+
+<div class="mannish-second_block">
+  <div class="mannish-setumei">
+  シャープで都会的なスタイル。全体の色調は<br>
+  無彩色で明度差のある配色で、小物に高彩度<br>
+  色をアクセントカラーとして用いると効果的。<br>
+  素材には石・タイル・金属・人工素材などが<br>
+  使われ、直線的なラインが特徴。
+  </div>
+  <div class="mannish-sikisai">
+  素材・・・石・タイル・金属・人工素材<br>
+  色彩・・・明度差のある無彩色
+ <div class="mannish-block">
+  <div class="mannish-color-block1">
+  </div>
+
+  <div class="mannish-color-block2">
+  </div>
+ </div>
+  </div>
+
+</div>
+
+<div class="mannish-third-block">
+</div>
+<div class="posts-container">
+  <% @posts.each do |t| %>
+  <div class="post">
+     <div class="itiran-photo">
+      <%= image_tag t.image_url, size: "300x240" if t.image? %><br>
+     </div>
+      <%= t.genre %><br>
+      <%= t.about %><br>
+      <%= t.tagu %><br>
+      <% if user_signed_in? %>
+      <%= link_to t.user.name, user_path(t.user.id) %><br>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>
+            <i class="fas fa-heart fa-bounce animated-hover"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to post_likes_path(id: t.id, post_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+    <% else %>
+    <i class="far fa-heart"></i><%= t.likes.count %>
+   <% end %>
+  <% if user_signed_in? && current_user.id == t.user_id %>
+  <%= link_to "詳細へ", post_path(t.id) %>
+  <%= link_to "編集する", edit_post_path(t.id) %>
+  <%= link_to "削除する", post_path(t.id), method: :delete %>
+  <% end %> 
+
+  </div>
+  <% end %>
+ 
+</div>
+</body>

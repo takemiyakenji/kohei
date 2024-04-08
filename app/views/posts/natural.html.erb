@@ -1,0 +1,70 @@
+<body>
+
+<div class="natural-top">
+  <div class="natural-toptext">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    NATURAL</br>
+     (ナチュラル)
+  </div>
+ <%= image_tag("natural9.jpg",class: "natural-top_image") %>
+</div>
+
+<div class="natural-second_block">
+  <div class="natural-setumei">
+  床・壁・天井は、基本的に自然素材の色で仕<br>
+  上げます。家具は白木やナラ材、籐などでシ<br>
+  ンプル・直線的なデザインにし、ファブリッ<br>
+  ク（生地）は麻・コットン地などを用います。<br>
+  全体の色調は、中～高明度、低～中彩度のベ<br>
+  ージュ・ブラウン系でまとめます。
+  </div>
+  <div class="natural-sikisai">
+  素材・・・白木、籐、木綿、麻<br>
+  色彩・・・ベージュ・ブラウン系
+ <div class="natural-block">
+  <div class="natural-color-block1">
+  </div>
+
+  <div class="natural-color-block2">
+  </div>
+ </div>
+  </div>
+
+</div>
+
+<div class="natural-third-block">
+</div>
+<div class="posts-container">
+  <% @posts.each do |t| %>
+  <div class="post">
+     <div class="itiran-photo">
+      <%= image_tag t.image_url, size: "300x240" if t.image? %><br>
+     </div>
+      <%= t.genre %><br>
+      <%= t.about %><br>
+      <%= t.tagu %><br>
+      <% if user_signed_in? %>
+      <%= link_to t.user.name, user_path(t.user.id) %><br>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>
+            <i class="fas fa-heart fa-bounce animated-hover"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to post_likes_path(id: t.id, post_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+    <% else %>
+    <i class="far fa-heart"></i><%= t.likes.count %>
+   <% end %>
+  <% if user_signed_in? && current_user.id == t.user_id %>
+  <%= link_to "詳細へ", post_path(t.id) %>
+  <%= link_to "編集する", edit_post_path(t.id) %>
+  <%= link_to "削除する", post_path(t.id), method: :delete %>
+  <% end %> 
+
+  </div>
+  <% end %>
+ 
+</div>
+</body>

@@ -1,0 +1,101 @@
+<h1>インテリアデザイン</h1>
+<h3>一覧ページ</h3>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>6-1-7 インテリアスタイル</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
+
+</head>
+
+<body>
+
+<h2>インテリアスタイル</h2>
+
+<ul class="slider">
+  <li>
+    <%= link_to posts_casual_path do %>
+      <%= image_tag "casual1.jpg" %>
+      <p class="casual-box">カジュアル</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_natural_path do %>
+      <%= image_tag "natural1.jpg" %>
+      <p class="natural-box">ナチュラル</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_modern_path do %>
+      <%= image_tag "modern1.jpg" %>
+      <p class="modern-box">モダン</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_classic_path do %>
+      <%= image_tag "classic9.jpg" %>
+      <p class="classic-box">クラシック</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_orthodox_path do %>
+      <%= image_tag "orthodox3.jpg" %>
+      <p class="orthodox-box">オーソドックス</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_elegant_path do %>
+      <%= image_tag "elegant8.jpg" %>
+      <p class="elegant-box">エレガント</p>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to posts_chic_path do %>
+      <%= image_tag "chic2.jpg" %>
+      <p class="chic-box">シック</p>
+    <% end %>
+  </li>
+  <li>
+  <%= link_to posts_urban_path do %>
+    <%= image_tag "urban2.jpg" %>
+    <p class="urban-box">アーバン</p>
+  <% end %>
+  </li>
+  <li>
+    <%= link_to posts_mannish_path do %>
+      <%= image_tag "mannish3.jpg" %>
+      <p class="mannish-box">マニッシュ</p>
+    <% end %>
+  </li>
+  <li>
+  <%= link_to posts_ethnic_path do %>
+    <%= image_tag "ethnic2.jpg" %>
+    <p class="ethnic-box">エスニック</p>
+  <% end %>
+  </li>
+  <!--/slider--></ul>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+<% if user_signed_in? %>
+  <%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+<%= link_to "新規投稿へ", new_post_path %>
+
