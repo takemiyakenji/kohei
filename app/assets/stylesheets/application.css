@@ -14,16 +14,19 @@
  *= require_self
  */
  * {
-    padding: 0;
-    margin: 0;
-    top: 0%;
-  }
-  body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-  }
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  position: relative; 
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
   header {
-    height: 55px;
+    height: 71px;
     z-index: 1;
     padding: 10px;
     display: flex;
@@ -32,7 +35,7 @@
     font-family: 'Noto Sans Mono', monospace;
     position: fixed;
     width: 100%;
-    background-color: rgba(230, 229, 229, 0.915);
+    background-color: rgba(255, 247, 233, 0.593);
 }
 #g-nav{
     position:fixed;
@@ -179,10 +182,22 @@ footer {
     margin-right: 40px;
   }
 
+.header-logo{
+  font-family: serif;
+}
 
+footer {
+  color: rgb(0, 0, 0);
+  height: 30px;
+  background-color: rgba(255, 247, 233, 0.593);
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-
+  
+}
 
 
 

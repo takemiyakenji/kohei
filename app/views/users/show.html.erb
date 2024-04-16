@@ -1,24 +1,52 @@
-<h1>users#show</h1>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>プロフィール : <%= @user.profile %></p>
-<%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+<br>
+<br>
+<br>
+<br>
+<div class="mypage-container">
+<div class="mypage-image">
+<%= image_tag @user.image_url, size: "400x320" if @user.image? %>
+</div>
+<div class="mypage-zyouhou">
+<div class="mypage-name">
+<p>name : <%= @user.name %></p>
+</div>
+<div class="mypage-email">
+<p>mail address : <%= @user.email %></p>
+</div>
+<div class="mypage-profile">
+<p>profile : <%= @user.profile %></p>
+</div>
+</div>
+</div>
 <% if current_user.id == @user.id %>
   <%= link_to "編集する", edit_user_registration_path %>
 <% end %>
 
+
+
 <h2>ユーザーの投稿一覧</h2>
-<% @user.posts.each do |t| %>
-  <%= t.user.name %>
-  <%= t.genre %>
-<% end %>
+<div class= "toukouimage">
+  <% @user.posts.each do |t| %>
+    <div class="aaa">
+    <%= link_to post_path(t.id) do %>
+    <%= image_tag t.image_url, size: "400x320" if t.image? %></br>
+    <% end %>
+    </div>
+  <% end %>
+</div>
 
 <!-- 以下はいいね機能を実装している場合-->
 <h2>ユーザーがいいねした投稿一覧</h2>
-<% @user.liked_posts.each do |t| %>
-  <%= t.user.name %>
-  <%= t.genre %>
-<% end %>
+<div class= "iineimage">
+  <% @user.liked_posts.each do |t| %>
+    <div class="bbb">
+    <%= link_to post_path(t.id) do %>
+    <%= image_tag t.image_url, size: "400x320" if t.image? %></br>
+    <% end %>
+    </div>
+  <% end %>
+  
+</div>
 <!-- ここまで-->
 
 <%= link_to "Tweet一覧に戻る", posts_path %>

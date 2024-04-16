@@ -1,5 +1,3 @@
-<h1>インテリアデザイン</h1>
-<h3>一覧ページ</h3>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,11 +11,71 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
 
+
 </head>
 
 <body>
+<br>
+<br>
+<br>
+<div class="top-first-block">
+<%= image_tag("top3.png",class: "top_image") %>
+</div>
 
-<h2>インテリアスタイル</h2>
+
+
+
+
+<div class="top-second_block">
+<div class="top-image">
+<%= image_tag("modern5.jpg",class: "top-setumei-image1") %>
+<%= image_tag("natural5.jpeg",class: "top-setumei-image2") %>
+<%= image_tag("classic6.jpeg",class: "top-setumei-image3") %>
+<%= image_tag("ethnic2.jpg",class: "top-setumei-image4") %>
+<%= image_tag("americanvintage2.jpeg",class: "top-setumei-image5") %>
+<%= image_tag("wamodern.jpeg",class: "top-setumei-image6") %>
+<%= image_tag("itrianmodern1.jpg",class: "top-setumei-image7") %>
+<%= image_tag("chic1.jpeg",class: "top-setumei-image8") %>
+<%= image_tag("modern4.jpg",class: "top-setumei-image9") %>
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="circle3"></div>
+<div class="circle4"></div>
+<div class="circle5"></div>
+<div class="circle6"></div>
+<div class="circle7"></div>
+<div class="circle8"></div>
+<div class="circle9"></div>
+<div class="circle10"></div>
+<div class="circle11"></div>
+<div class="circle12"></div>
+<div class="circle13"></div>
+<div class="circle14"></div>
+<div class="circle15"></div>
+</div>
+<div class="top-setumei">
+<h1>インテリアスタイルと色彩</h1>
+<br>
+<br>
+国や地域で長い年月をかけて培わ<br>
+れた伝統・文化や風土などにより、<br>
+様々なインテリアスタイルが形成<br>
+されてきました。<br>
+<br>
+各スタイルに応じた配色を用いる<br>
+ことで統一感と調和が生まれます。
+</div>
+</div>
+
+<div class="top-third-block">
+<div class="top-third-block1">
+<h1>自分の好きなスタイルを見つけよう。</h1>
+</div>
+<div class="top-third-block2">
+<p class="keitou">
+・系統で探す
+</p>
+</div>
 
 <ul class="slider">
   <li>
@@ -75,6 +133,12 @@
     <% end %>
   </li>
   <li>
+  <%= link_to posts_brooklyn_path do %>
+    <%= image_tag "brooklyn1.jpeg" %>
+    <p class="brooklyn-box">ブルックリン</p>
+  <% end %>
+  </li>
+  <li>
   <%= link_to posts_ethnic_path do %>
     <%= image_tag "ethnic2.jpg" %>
     <p class="ethnic-box">エスニック</p>
@@ -82,20 +146,73 @@
   </li>
   <!--/slider--></ul>
 
+  <div class="top-third-block3">
+<p class="tiiki">
+・地域で探す
+</p>
+</div>
+
+  <ul class="slider">
+    <li>
+      <%= link_to posts_americanvintage_path do %>
+        <%= image_tag "americanvintage2.jpeg" %>
+        <p class="americanvintage-box">アメリカンヴィンテージ</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_nisikaigan_path do %>
+        <%= image_tag "nisikaigan4.jpeg" %>
+        <p class="nisikaigan-box">西海岸</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_hokuou_path do %>
+        <%= image_tag "hokuou3.jpg" %>
+        <p class="hokuou-box">北欧</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_wamodern_path do %>
+        <%= image_tag "wamodern.jpeg" %>
+        <p class="wamodern-box">和モダン</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_itarian_path do %>
+        <%= image_tag "itrianmodern1.jpg" %>
+        <p class="itarian-box">イタリアンモダン</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_french_path do %>
+        <%= image_tag "french1.jpg" %>
+        <p class="french-box">フレンチカントリー</p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to posts_african_path do %>
+        <%= image_tag "african1.jpg" %>
+        <p class="african-box">アフリカン</p>
+      <% end %>
+    </li>
+    <li>
+    <%= link_to posts_azian_path do %>
+      <%= image_tag "azian1.jpeg" %>
+      <p class="azian-box">アジアン</p>
+    <% end %>
+    </li>
+    <!--/slider--></ul>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script>
 
+
+  
+
+</div>
 </body>
 </html>
 
-
-
-
-
-<% if user_signed_in? %>
-  <%= link_to "マイページへ", user_path(current_user.id) %>
-<% end %>
-<%= link_to "新規投稿へ", new_post_path %>
 

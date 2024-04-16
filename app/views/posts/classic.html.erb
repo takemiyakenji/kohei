@@ -37,34 +37,18 @@
 <div class="classic-third-block">
 </div>
 <div class="posts-container">
-  <% @posts.each do |t| %>
+<% @posts.each do |t| %>
   <div class="post">
      <div class="itiran-photo">
-      <%= image_tag t.image_url, size: "300x240" if t.image? %><br>
-     </div>
-      <%= t.genre %><br>
-      <%= t.about %><br>
-      <%= t.tagu %><br>
-      <% if user_signed_in? %>
-      <%= link_to t.user.name, user_path(t.user.id) %><br>
-      <% if current_user.already_liked?(t) %>
-          <%= button_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>
-            <i class="fas fa-heart fa-bounce animated-hover"></i><%= t.likes.count %>
-          <% end %>
-      <% else %>
-          <%= button_to post_likes_path(id: t.id, post_id: t.id), method: :post do %>
-            <i class="far fa-heart"></i><%= t.likes.count %>
-          <% end %>
+     <%= link_to post_path(t.id) do %>
+      <%= image_tag t.image_url, size: "400x320" if t.image? %>
       <% end %>
-    <% else %>
-    <i class="far fa-heart"></i><%= t.likes.count %>
-   <% end %>
+     </div>
+ 
   <% if user_signed_in? && current_user.id == t.user_id %>
-  <%= link_to "詳細へ", post_path(t.id) %>
   <%= link_to "編集する", edit_post_path(t.id) %>
   <%= link_to "削除する", post_path(t.id), method: :delete %>
   <% end %> 
-
   </div>
   <% end %>
  

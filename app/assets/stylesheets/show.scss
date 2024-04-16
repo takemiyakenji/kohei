@@ -1,0 +1,49 @@
+.post{
+  width: calc(33%);
+}
+
+  .posts-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .myname{
+    display: flex;
+    align-items: center;
+  }
+
+  .circular-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 半分の値を指定することで円形になります */
+    overflow: hidden; /* 画像の円形以外の部分を隠すために必要です */
+  }
+
+  .toukou-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .left-box,.right-box{
+    flex: 1;
+  }
+
+
+
+  .right-box{
+    text-align: left;
+    width: 100px;
+    height: 490px;
+    border: solid rgb(0, 0, 0) 1px;
+    
+  }
+.comment1[type="text"]{
+  width: 400px;
+  height: 400px;
+  display: block;
+  word-wrap: break-word;
+  word-break: normal;
+}
+

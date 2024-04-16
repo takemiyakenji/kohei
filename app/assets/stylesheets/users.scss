@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.field-login{
+  text-align: center;
+}
 .login-text{
     margin-top: 100px;
     text-align: center;
@@ -22,3 +25,43 @@
     background-size: cover;
   
 }
+
+.toukouimage{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .aaa{
+    width: calc(33%);
+  }
+  .iineimage{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bbb{
+    width: calc(33%);
+  }
+
+  .mypage-image{
+    margin-left: 2%;
+  }
+
+.mypage-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mypage-zyouhou{
+  font-size: 30px;
+  font-family: serif;
+}
+
+.mypage-name{
+  background-color: rgb(180, 233, 180);
+  width: 100%;
+
+}
+

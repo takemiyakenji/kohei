@@ -3,9 +3,92 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .field{
+    padding-top: 35px;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
+    margin-left: 120px;
+    font-family: "Noto Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
 }
+.new-title{
+    display: flex;
+    height: 124px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.new-container{
+    display: flex;
+    width: 100%;
+}
+
+.left, .right {
+    flex: 1; /* 左右の要素を均等に伸ばす */
+}
+
+.left{
+    flex: 4;
+    flex-direction: column;
+}
+
+.right{
+    flex: 6;
+    flex-direction: column;
+    display: flex; /* 親要素をフレックスコンテナにする */
+    justify-content: flex-start; /* 要素を左揃えに配置 */
+}
+
+.image-gazou{
+    display: flex;
+    width: 255px;
+    height: 95px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.new-image{
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    padding-left: 50px;
+}
+
+
+
+.sougaku{
+    margin-left: 50px;
+}
+.naiyou{
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-left: 108px;
+}
+
+
+.toukousuru{
+    margin-left: 90%;
+}
+
 .casual-box{
     text-align: center;
     margin-top: 10px;
@@ -36,7 +119,7 @@
     padding: 5px;
     margin-right: 260px;
     margin-left: 260px;
-    background-color: rgb(222, 172, 237);
+    background-color: rgb(181, 181, 181);
     color: aliceblue;
     font-weight: 900;
     font-style: serif;
@@ -114,6 +197,19 @@
     font-style: serif;
     font-size: 20px;
 }
+
+.brooklyn-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(169, 160, 153);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
 .ethnic-box{
     text-align: center;
     margin-top: 10px;
@@ -127,15 +223,420 @@
     font-size: 20px;
 }
 
-.naiyou{
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin: auto;
+.americanvintage-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(253, 172, 129);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
 }
-.haxtusyutagu{
-    width: 300px;
+.nisikaigan-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(164, 215, 120);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.hokuou-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(181, 181, 181);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.wamodern-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(45, 25, 10);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.itarian-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(121, 84, 55);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.french-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(255, 173, 224);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.african-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(150, 150, 150);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+.azian-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: rgb(192, 189, 133);
+    color: aliceblue;
+    font-weight: 900;
+    font-style: serif;
+    font-size: 20px;
+}
+
+.top-first-block{
+    height: 681px;
+  }
+
+
+.top-second_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 750px;
+    background-color: rgba(255, 247, 233, 0.593);
+    width: 100%;
+}
+    
+ 
+  .top-image,.top-setumei{
+    flex: 1; /* 左右の要素を均等に伸ばす */
+  }
+
+  .top_image{
+    width: 1210px;
+    height: 681px;
+  }
+
+.top-setumei{
+    margin-top: 10px;
+    margin-right: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-family: serif;
+    font-size: 18px;
+    text-align: center;
+    flex: 4;
+}
+
+.top-image{
+    position: relative;
+    width: 600px; /* コンテナの幅を指定 */
+    height: 750px; /* コンテナの高さを指定 */
+    flex: 6;
+    overflow: hidden;
+}
+.top-setumei-image1{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 550px;
+    margin-left: 60px;
+    position: absolute;
+
+}
+
+.top-setumei-image2{
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin-left: 10;
+    margin-top: 180px;
+    position: absolute;
+
+}
+
+.top-setumei-image3{
+    border-radius: 50%;
+    width: 200px;
     height: 200px;
-    display: block;
-    margin: auto;
+    margin-left: 250px;
+    top:20px;
+    position: absolute;
+}
+
+.top-setumei-image4{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 380px;
+    top:250px;
+    position: absolute;
+}
+
+.top-setumei-image5{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-left: 350px;
+    margin-top: 380px;
+    position: absolute;
+
+}
+
+.top-setumei-image6{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 500px;
+    top:170px;
+    position: absolute;
+}
+
+.top-setumei-image7{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: 270px;
+    top:550px;
+    position: absolute;
+}
+
+.top-setumei-image8{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 550px;
+    top:620px;
+    position: absolute;
+}
+
+.top-setumei-image9{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 270px;
+    top:680px;
+    position: absolute;
+
+}
+
+.circle1 {
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(255, 192, 192); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 210px;
+    top:160px;
+    position: absolute;
+}
+.circle2{
+    width: 15px; /* 円の直径を設定 */
+    height: 15px; /* 円の直径を設定 */
+    background-color: rgb(205, 255, 216); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 230px;
+    top:140px;
+    position: absolute;
+}
+
+.circle3 {
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(241, 255, 93); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 370px;
+    top:370px;
+    position: absolute;
+}
+.circle4{
+    width: 30px; /* 円の直径を設定 */
+    height: 30px; /* 円の直径を設定 */
+    background-color: rgb(255, 202, 230); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 230px;
+    top:540px;
+    position: absolute;
+}
+
+.circle5{
+    width: 15px; /* 円の直径を設定 */
+    height: 15px; /* 円の直径を設定 */
+    background-color: rgb(241, 255, 202); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 60px;
+    top:520px;
+    position: absolute;
+}
+
+.circle6 {
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(196, 238, 255); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 70px;
+    top:540px;
+    position: absolute;
+}
+.circle7{
+    width: 40px; /* 円の直径を設定 */
+    height: 40px; /* 円の直径を設定 */
+    background-color: rgb(181, 255, 207); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 20px;
+    top:560px;
+    position: absolute;
+}
+
+.circle8 {
+    width: 35px; /* 円の直径を設定 */
+    height: 35px; /* 円の直径を設定 */
+    background-color: rgb(255, 104, 104); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 480px;
+    top:320px;
+    position: absolute;
+}
+.circle9{
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(255, 233, 202); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 520px;
+    top:320px;
+    position: absolute;
+}
+
+.circle10 {
+    width: 15px; /* 円の直径を設定 */
+    height: 15px; /* 円の直径を設定 */
+    background-color: rgb(247, 156, 255); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 550px;
+    top:330px;
+    position: absolute;
+}
+.circle11{
+    width: 40px; /* 円の直径を設定 */
+    height: 40px; /* 円の直径を設定 */
+    background-color: rgb(157, 188, 255); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 600px;
+    top:560px;
+    position: absolute;
+}
+
+.circle12{
+    width: 15px; /* 円の直径を設定 */
+    height: 15px; /* 円の直径を設定 */
+    background-color: rgb(202, 246, 255); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 650px;
+    top:570px;
+    position: absolute;
+}
+
+.circle13 {
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(255, 192, 233); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 650px;
+    top:590px;
+    position: absolute;
+}
+.circle14{
+    width: 20px; /* 円の直径を設定 */
+    height: 20px; /* 円の直径を設定 */
+    background-color: rgb(245, 255, 202); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 350px;
+    top:650px;
+    position: absolute;
+}
+.circle15 {
+    width: 15px; /* 円の直径を設定 */
+    height: 15px; /* 円の直径を設定 */
+    background-color: rgb(192, 255, 230); /* 背景色を白に設定 */
+    border-radius: 50%; /* 要素を円形にする */
+    margin-left: 370px;
+    top:640px;
+    position: absolute;
+}
+
+.top-third_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    height: 3000px;
+    background-color: white
+
+  }
+
+.top-third-block1{
+    display: flex; /* 親要素をフレックスコンテナにする */
+    justify-content: center; /* 要素を水平方向に中央揃えにする */
+    align-items: center; /* 要素を垂直方向に中央揃えにする */
+    height: 200px; 
+    font-family: serif;
+}
+
+.top-third-block2{
+    display: flex; /* 親要素をフレックスコンテナにする */
+    justify-content: left; /* 要素を水平方向に中央揃えにする */
+    align-items: center; /* 要素を垂直方向に中央揃えにする */
+    height: 150px; 
+}
+.keitou{
+    font-family: serif;
+    font-size: 40px;
+    margin-left: 5%;
+    background-color: rgb(227, 227, 227);
+    width: 300px;
+    border-radius: 30px;
+}
+
+.top-third-block3{
+    display: flex; /* 親要素をフレックスコンテナにする */
+    justify-content: left; /* 要素を水平方向に中央揃えにする */
+    align-items: center; /* 要素を垂直方向に中央揃えにする */
+    height: 150px; 
+}
+.tiiki{
+    font-family: serif;
+    font-size: 40px;
+    margin-left: 5%;
+    background-color: rgb(227, 227, 227);
+    width: 300px;
+    border-radius: 30px;
 }

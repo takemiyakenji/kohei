@@ -37,7 +37,7 @@
   <% @posts.each do |t| %>
   <div class="post">
      <div class="itiran-photo">
-      <%= image_tag t.image_url, size: "300x240" if t.image? %><br>
+      <%= image_tag t.image_url, size: "400x320" if t.image? %><br>
      </div>
       <%= t.genre %><br>
       <%= t.about %><br>
@@ -57,7 +57,6 @@
     <i class="far fa-heart"></i><%= t.likes.count %>
    <% end %>
   <% if user_signed_in? && current_user.id == t.user_id %>
-  <%= link_to "詳細へ", post_path(t.id) %>
   <%= link_to "編集する", edit_post_path(t.id) %>
   <%= link_to "削除する", post_path(t.id), method: :delete %>
   <% end %> 

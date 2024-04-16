@@ -1,6 +1,6 @@
 .modern-top_image{
-  margin-left: 430px;
-  margin-top: 70px;
+  margin-left: 470px;
+  margin-top: 90px;
   width: 700px;
 
 }
@@ -10,76 +10,148 @@
   font-family: serif;
   position: absolute;
   z-index: 1;
-  top: 28%;
-  left: 9%;
-  border: solid rgb(222, 172, 237) 4px;
+  top: 8%;
+  left: 7%;
+  border: solid rgb(168, 168, 168) 4px;
   padding: 20px;
   text-align: center;
+  background-color: rgba(168, 168, 168, 0.2) ;
 }
 
 .modern-second_block {
-  background-color: #f0f0f0;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background-color: #e9ebef;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  height: 300px;
 }
+
+.modern-setumei,.modern-sikisai{
+  flex: 1; /* 左右の要素を均等に伸ばす */
+}
+
 .modern-setumei{
-  font-size: 30px;
+  font-size: 25px;
   font-family: serif;
-  margin-left:50px
+  margin-left:50px;
 }
 
 
 .modern-sikisai{
-  font-size: 20px;
-  font-family: serif;
-  margin-right:50px;
-  border: solid black 1px;
-  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.modern-iro{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  width: 270px;
+  height: 300px;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+.color{
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: serif;
+  text-align: center;
+}
 .modern-color-block1{
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-color: black;
-  margin-left:  100px;
+  top: 80px;
+  left:  40%;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .modern-color-block2{
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  margin-left:  30px;
+  width: 49px;
+  height: 49px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  top: 130px;
+  left:  25%;
+  border-radius: 50%;
+  position: absolute;
+}
+.modern-color-block3{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(176, 176, 176);
+  top: 130px;
+  left:  55%;
+  border-radius: 50%;
+  position: absolute;
 }
 
+.modern-setumei-image1{
+  width: 100px;
+  height: 30px;
+  top: 70px;
+  position: absolute;
+}
+.modern-setumei-image2{
+  width: 100px;
+  height: 30px;
+  top: 110px;
+  position: absolute;
+}
+.modern-setumei-image3{
+  width: 100px;
+  height: 30px;
+  top: 150px;
+  position: absolute;
+}
 .modern-block{
   display: flex;
 }
 
 .modern-third-block{
+  display: flex; /* 親要素をフレックスコンテナにする */
+  justify-content: center; /* 要素を水平方向に中央揃えにする */
+  align-items: center; /* 要素を垂直方向に中央揃えにする */
+  height: 250px; 
+}
+
+.osusume{
+  font-family: serif;
+    font-size: 30px;
+    align-items: center;
+    display: flex; /* Flexbox を使用 */
+    justify-content: center;
+}
+.modern-third-block2{
   height: 200px;
-  background-color: #f7f2f7;
-}
-.posts-container{
+  background-color: #ffffff;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 35px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
-.post{
-  width: 250px;
-  border: solid black 2px;
-  text-align: center;
-  margin: 20px;
-  padding: 10px 40px;
-  border-radius: 20px;
-  margin-left: 30px;
-  justify-content: center;
+.modern-final-block{
+  height: 200px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
   align-items: center;
-
+}
+.minnna{
+  font-family: serif;
+  font-size: 30px;
+  align-items: center;
+  display: flex; /* Flexbox を使用 */
+  justify-content: center;
 }
 
 .itiran-photo{
@@ -96,6 +168,16 @@
   left: 0;
   width: 300px;
   height: 40px
+  
 }
 
+.modern-kensaku{
+  margin-left: 70%;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.modern-hurigana{
+  font-size: 30px;
+}
 

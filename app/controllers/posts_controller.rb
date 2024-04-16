@@ -123,12 +123,119 @@ class PostsController < ApplicationController
         end
     end
 
+    def brooklyn
+        @posts = Post.where(genre:"ブルックリン")
+        if params[:search] == nil
+            @posts= Post.where(genre:"ブルックリン")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"ブルックリン")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
     def ethnic
         @posts = Post.where(genre:"エスニック")
         if params[:search] == nil
             @posts= Post.where(genre:"エスニック")
         elsif params[:search] == ''
             @posts= Post.where(genre:"エスニック")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+    def americanvintage
+        @posts = Post.where(genre:"アメリカンヴィンテージ")
+        if params[:search] == nil
+            @posts= Post.where(genre:"アメリカンヴィンテージ")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"アメリカンヴィンテージ")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def nisikaigan
+        @posts = Post.where(genre:"西海岸")
+        if params[:search] == nil
+            @posts= Post.where(genre:"西海岸")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"西海岸")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def hokuou
+        @posts = Post.where(genre:"北欧")
+        if params[:search] == nil
+            @posts= Post.where(genre:"北欧")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"北欧")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def wamodern
+        @posts = Post.where(genre:"和モダン")
+        if params[:search] == nil
+            @posts= Post.where(genre:"和モダン")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"和モダン")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def itarian
+        @posts = Post.where(genre:"イタリアンモダン")
+        if params[:search] == nil
+            @posts= Post.where(genre:"イタリアンモダン")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"イタリアンモダン")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def french
+        @posts = Post.where(genre:"フレンチカントリー")
+        if params[:search] == nil
+            @posts= Post.where(genre:"フレンチカントリー")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"フレンチカントリー")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def african
+        @posts = Post.where(genre:"アフリカン")
+        if params[:search] == nil
+            @posts= Post.where(genre:"アフリカン")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"アフリカン")
+        else
+            #部分検索
+            @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')
+        end
+    end
+
+    def azian
+        @posts = Post.where(genre:"アジアン")
+        if params[:search] == nil
+            @posts= Post.where(genre:"アジアン")
+        elsif params[:search] == ''
+            @posts= Post.where(genre:"アジアン")
         else
             #部分検索
             @posts = Post.where("genre LIKE ? OR time LIKE ? OR price LIKE ?",'%' + params[:search] + '%','%' + params[:search] + '%','%' + params[:search] + '%')

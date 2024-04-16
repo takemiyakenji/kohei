@@ -1,5 +1,15 @@
+<br>
+<br>
+<br>
+<br>
+
 <%= form_for @post do |f| %>
-    <%= f.label :genre %>
+    <%= f.label :ジャンル %>
     <%= f.text_field :genre, :size => 140 %> 
     <%= f.submit "編集する" %>
-  <% end %>
+<div class="comment">
+    <%= f.label :コメント %>
+    <%= f.text_field :about, :size => 140,class:"comment1" %> 
+    <%= f.submit "編集する" %>
+</div>   
+<% end %>
